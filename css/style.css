@@ -40,12 +40,16 @@ body.index {
     width: 780px;
     float: left;
 }
+.main-navigation ul {
+    margin: 0
+}
 .user-block {
     min-height: 70px;
     width: 140px;
     float: right;
 }
 .main-navigation ul {
+    padding: 0;
 	list-style: none;
 }
 .index-logo {
@@ -85,10 +89,13 @@ body.index {
     width: 300px;
 }
 .page-title {
+    margin: 0;
 	font-size: 30px;
     font-weight: bold;
+    margin-bottom: 25px;
 }
 .list-title {
+    margin: 0;
 	font-size: 24px;
     margin-bottom: 35px;
 }
@@ -101,10 +108,11 @@ time {
 	font-weight: normal;
 }
 .tagline {
+    margin: 0;
     width: 568px;
 	font-size: 48px;
     margin: 0 auto;
-    margin-bottom: 55px;
+    margin-bottom: 60px;
 }
 table {
 	border-collapse: collapse;
@@ -121,6 +129,7 @@ td + td {
 	text-align: center;
 }
 .breadcrumbs {
+    padding: 0;
 	list-style: none;
     margin-bottom: 55px;
 }
@@ -179,9 +188,22 @@ td + td {
 .about-us:last-child {
     margin-right: 0;
 }
+.buy + .list-title {
+    margin-top: 65px;
+}
 .shop-sidebar {
     width: 220px;
     float: left;
+    margin-right: 20px;
+}
+.shop-sidebar ul {
+    padding: 0;
+}
+.shop-sidebar input {
+    margin-right: 25px;
+}
+.manufacturer-group {
+    margin-bottom: 50px
 }
 .shop-items {
     float: right;
@@ -190,6 +212,7 @@ td + td {
 }
 .shop-item {
     display: inline-block;
+    min-height: 286px;
     font-size: 14px;
     width: 220px;
     vertical-align: top;
