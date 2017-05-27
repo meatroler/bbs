@@ -12,10 +12,10 @@
   <header class="main-header">
     <div class="container clearfix">
             <nav class="main-navigation">
+                <a href="index.html" class="logo-inner"><img src="img/inner-logo.png" alt="Главная страница" width="111" height="24"></a>
                 <ul>
-                    <li><a href="index.html">Главная</a></li>
                     <li><a href="price.html">Прайс-лист</a></li>
-                    <li><a href="shop.html">Магазин</a></li>
+                    <li class="active"><a href="shop.html">Магазин</a></li>
                     <li><a href="item.html">НАБОР ДЛЯ ПУТЕШЕСТВИЙ</a></li>
                 </ul>
             </nav>
@@ -26,7 +26,7 @@
         </header>
 
 
-    <main class="index container">
+    <main class="shop container">
         <div class="inner-page-title">
             <h1 class="page-title">Средства для ухода</h1>
             <ul class="breadcrumbs">
@@ -35,53 +35,79 @@
                 <li><a class="inactive"> Средства для ухода</a></li>
             </ul>
         </div>
-        <div class="content clearfix">
+        <div class="inner-content clearfix">
             <div class="shop-sidebar">
                 <form action="https://echo.htmlacademy.ru" method="post">
-                    <h2 class="list-title">Производители:</h2>
-                    <ul class="manufacturer-group">
+                    <h2>Производители:</h2>
+                    <ul class="manufacturer-group custom-list-2">
                         <li>
-                           <label><input type="checkbox" name="manufacturer-1" checked>
-                            BAXTER OF CALIFORNIA</label>
+                           <label class="manufacturer-checkbox">
+                                <input type="checkbox" name="manufacturer-1" checked>
+                                <span class="checkbox-indicator"></span>BAXTER OF CALIFORNIA
+                            </label>
                         </li>
 
                         <li>
-                            <label><input type="checkbox" name="manufacturer-2">
-                           MR NATTY</label>
+                            <label class="manufacturer-checkbox">
+                                <input type="checkbox" name="manufacturer-2">
+                                <span class="checkbox-indicator"></span>
+                                MR NATTY
+                            </label>
                         </li>
 
                         <li>
-                            <label><input type="checkbox" name="manufacturer-3" checked>
-                           SUAVECITO</label>
+                            <label class="manufacturer-checkbox">
+                                <input type="checkbox" name="manufacturer-3" checked>
+                                <span class="checkbox-indicator"></span>
+                                SUAVECITO
+                           </label>
                         </li>
 
                         <li>
-                            <label><input type="checkbox" name="manufacturer-4">
-                            MALIN+GOETZ</label>
+                            <label class="manufacturer-checkbox">
+                                <input type="checkbox" name="manufacturer-4">
+                                <span class="checkbox-indicator"></span>
+                                MALIN+GOETZ
+                            </label>
                         </li>
 
                         <li>
-                            <label><input type="checkbox" name="anufacturer-5">
-                            MURRAY'S</label>
+                            <label class="manufacturer-checkbox">
+                                <input type="checkbox" name="anufacturer-5">
+                                <span class="checkbox-indicator"></span>
+                                MURRAY'S
+                            </label>
                         </li>
 
                         <li>
-                            <label><input type="checkbox" name="manufacturer-6" checked>
-                           AMERICAN-CREW</label>
+                            <label class="manufacturer-checkbox">
+                                <input type="checkbox" name="manufacturer-6" checked>
+                                <span class="checkbox-indicator"></span>AMERICAN-CREW
+                            </label>
                         </li>
                     </ul>
-                    <h2 class="list-title">Группы товаров:</h2>
-                    <ul class="items-group">
+                    <h2>Группы товаров:</h2>
+                    <ul class="items-group custom-list-2">
                         <li>
-                            <label><input type="radio" name="item-group" value="1">Бритвенные принадлежности</label>
+                            <label class="item-radiobutton">
+                                <input type="radio" name="item-group" value="1">
+                                <span class="checkbox-indicator"></span>Бритвенные принадлежности
+                            </label>
                         </li>
 
                         <li>
-                            <label><input type="radio" name="item-group" value="2" checked>Средства для ухода</label>
+                            <label class="item-radiobutton">
+                                <input type="radio" name="item-group" value="2" checked>
+                                <span class="checkbox-indicator"></span>Средства для ухода
+                            </label>
                         </li>
 
                         <li>
-                            <label><input type="radio" name="item-group" value="3">Аксессуары</label>
+                            <label class="item-radiobutton">
+                                <input type="radio" name="item-group" value="3">
+                                <span class="checkbox-indicator"></span>
+                                Аксессуары
+                            </label>
                         </li>
                     </ul>
                     <button type="submit" class="btn">Показать</button>
@@ -93,11 +119,11 @@
                     <img src="img/shop-preview-1.jpg" alt="Набор для путешествий" width="220" height="165">
                     <div class="item-description">
                         <a href="#">
-                            <span>Набор для путешествий <br> "BAXTER OF CALIFORNIA"</span>
+                            <span class="small-text">Набор для путешествий</span><br><span>"BAXTER OF CALIFORNIA"</span>
                         </a>
                     </div>
                     <div class="buy">
-                        <span>2 900 руб.</span><a href="№" class="btn">Купить</a>
+                        <span>2 900 руб.</span><a href="#" class="btn">Купить</a>
                     </div>
                 </div>
 
@@ -109,7 +135,7 @@
                         </a>
                     </div>
                     <div class="buy">
-                        <span>750 руб.</span><a href="№" class="btn">Купить</a>
+                        <span>750 руб.</span><a href="#" class="btn">Купить</a>
                     </div>
                 </div>
 
@@ -121,7 +147,7 @@
                         </a>
                     </div>
                     <div class="buy">
-                        <span>290 руб.</span><a href="№" class="btn">Купить</a>
+                        <span>290 руб.</span><a href="#" class="btn">Купить</a>
                     </div>
                 </div>
 
@@ -133,7 +159,7 @@
                         </a>
                     </div>
                     <div class="buy">
-                        <span>500 руб.</span><a href="№" class="btn">Купить</a>
+                        <span>500 руб.</span><a href="#" class="btn">Купить</a>
                     </div>
                 </div>
 
@@ -145,7 +171,7 @@
                         </a>
                     </div>
                     <div class="buy">
-                        <span>300 руб.</span><a href="№" class="btn">Купить</a>
+                        <span>300 руб.</span><a href="#" class="btn">Купить</a>
                     </div>
                 </div>
 
@@ -157,14 +183,14 @@
                         </a>
                     </div>
                     <div class="buy">
-                        <span>3 900 руб.</span><a href="№" class="btn">Купить</a>
+                        <span>3 900 руб.</span><a href="#" class="btn">Купить</a>
                     </div>
                 </div>
                 <div class="paginator">
-                    <a class="btn" href="#1">1</a>
-                    <a class="btn" class="active" href="#3">2</a>
-                    <a class="btn" href="#3">3</a>
-                    <a class="btn" href="#3">4</a>
+                    <a class="btn" href="#">1</a>
+                    <a class="btn active">2</a>
+                    <a class="btn" href="#">3</a>
+                    <a class="btn" href="#">4</a>
                 </div> 
             </div>  
         </div>

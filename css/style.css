@@ -293,8 +293,21 @@ body.index {
     clear: both;
     width: 100%;
 }
+.paginator {
+    margin-top: 25px;
+}
 .paginator .btn {
-    margin-right: 0;
+    box-sizing: border-box;
+    margin: 0;
+    margin-right: 7px;
+    padding: 0;
+    padding: 10px 12px;
+    width: 43px;
+}
+.paginator .btn.active {
+    background-color: #ffffff;
+    color: #000000;
+    cursor: default;
 }
 .inner-content h2 {
     margin-top: 60px;
@@ -327,7 +340,7 @@ body.index {
 	text-align: center;
 }
 .inner-page-title {
-        margin-bottom: 55px;
+    margin-bottom: 55px;
 }
 .tagline {
     margin-top: 55px;
@@ -373,6 +386,76 @@ body.index {
     height: 8px;
     background-color: #000000;
     transform: rotate(45deg);
+}
+.custom-list-2 {
+    margin: 14px 0;
+    padding: 0;
+    list-style: none;
+}
+.custom-list-2 li {
+    position: relative;
+    margin-bottom: 15px;
+    padding-left: 45px;
+}
+.manufacturer-checkbox {
+    position: relative;
+}
+.manufacturer-checkbox input[type="checkbox"] + .checkbox-indicator {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: 2px solid black;
+    top: -3px;
+    left: -45px;
+}
+.manufacturer-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before,
+.manufacturer-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 2px;
+    width: 15px;
+    height: 2px;
+    background-color: #000000;
+}
+.manufacturer-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before{
+    transform: rotate(45deg);
+}
+.manufacturer-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after{
+    transform: rotate(-45deg);
+}
+.item-radiobutton {
+    position: relative;
+}
+.item-radiobutton input[type="radio"] + .checkbox-indicator {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 20px;
+    top: -3px;
+    left: -45px;
+}
+.item-radiobutton input[type="radio"]:checked + .checkbox-indicator::after{
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background-color: black;
+    border: 3.5px solid black;
+    border-radius: 10px;
+    left: 5px;
+    top: 4.5px;
+}
+.custom-list-2 input {
+    display: none;
+}
+.list-tight li {
+    margin-bottom: 4px;
 }
 .breadcrumbs {
     padding: 0;
@@ -468,13 +551,19 @@ a.inactive:hover {
     width: 390px;
     margin-left: 90px; 
 }
-.buy + .list-title {
-    margin-top: 65px;
+.available {
+    margin-bottom: 33px;
+}
+.shop-sidebar .btn {
+    margin-top: 30px;
 }
 .shop-sidebar {
     width: 220px;
     float: left;
     margin-right: 20px;
+}
+.shop-sidebar h2 {
+    margin-top: 0;
 }
 .shop-sidebar ul {
     padding: 0;
@@ -491,17 +580,54 @@ a.inactive:hover {
     font-size: 0;
 }
 .item img,
-.shop-items img {
+.shop-item {
 box-shadow: 0px 0px 15px 0px rgba(0, 1, 1, 0.2); 
 text-shadow: 0px 0px 15px rgba(0, 1, 1, 0.2); 
 }
 .shop-item {
     display: inline-block;
+    background-color: #ffffff;
     min-height: 286px;
     font-size: 14px;
+    line-height: 18px;
     width: 220px;
     vertical-align: top;
     margin-right: 20px;
+    margin-bottom: 20px;
+}
+.item-description{
+    margin-top: 10px;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+.item-description a{
+    text-decoration: none;
+    color: #000000;
+}
+.item-description a:hover {
+    text-decoration: underline;
+}
+.shop-item .buy {
+    width: 188px;
+    margin-top: 15px;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+.buy span {
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    width: 110px;
+    height: 34px;
+    padding-top: 10px;
+    background-color: #e5e5e5;
+}
+.buy .btn {
+    box-sizing: border-box;
+    width: 78px;
+    padding: 10px 15px;
+    margin-right: 0;
+
 }
 .shop-item:nth-child(3n) {
     margin-right: 0;
@@ -593,6 +719,7 @@ text-shadow: 0px 0px 15px rgba(0, 1, 1, 0.2);
 }
 /*popup*/
 .modal-content {
+    display: none;
     position: absolute;
     top: 120px;
     left: 50%;
@@ -601,6 +728,7 @@ text-shadow: 0px 0px 15px rgba(0, 1, 1, 0.2);
     color: #000000;
     background: #f8f3f0 url(../img/bg-pattern.png);
     margin-left: -230px;
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
 }
 .modal-content-close {
     position: absolute;
@@ -648,7 +776,7 @@ text-shadow: 0px 0px 15px rgba(0, 1, 1, 0.2);
 }
 .login-form input[type="text"],
 .login-form input[type="password"] {
-    width: 236px;
+    width: 300px;
     margin: 0;
     margin-bottom: 10px;
     padding: 10px 20px;
@@ -668,10 +796,84 @@ text-shadow: 0px 0px 15px rgba(0, 1, 1, 0.2);
 .login-form input.icon-user {
     background-image: url("../img/spritesheet-better.png");
     background-repeat: no-repeat;
-    background-position: 110% -365px;
+    background-position: 105% -365px;
 }
 .login-form input.icon-password {
     background-image: url("../img/spritesheet-better.png");
     background-repeat: no-repeat;
-    background-position: 110% -255px;
+    background-position: 105% -255px;
+}
+.login-form .restore {
+    float: right;
+    color: #000000;
+}
+.login-form .btn {
+    width: 100%;
+    margin-top: 15px;
+}
+.login-checkbox input[type="checkbox"] {
+    display: none;
+}
+.login-checkbox {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+}
+.login-checkbox:hover {
+    color: #663d15;
+}
+.login-checkbox input[type="checkbox"] + .checkbox-indicator {
+    position: absolute;
+    top: -3px;
+    left: 0;
+    width: 17px;
+    height: 17px;
+    border: 2px solid #000000;
+}
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before,
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 1px;
+    width: 15px;
+    height: 2px;
+    background-color: #000000;
+}
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before{
+    transform: rotate(45deg);
+}
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after{
+    transform: rotate(-45deg);
+}
+.modal-content-map {
+    display: none;
+    position: fixed;
+    z-index: 11;
+    top: 50%;
+    left: 50%;
+    width: 766px;
+    height: 561px;
+    margin-top: -280px;
+    margin-left: -390px;
+    background: #e9e5dc url("../img/map.jpg");
+    border: 7px solid white;
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+}
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+span.inactive {
+    float: right;
+    margin-right: 10px;
+}
+.small-text {
+    text-transform: none;
 }
